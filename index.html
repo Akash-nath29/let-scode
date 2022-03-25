@@ -1,0 +1,180 @@
+<!Doctype html>
+<html>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+  content="width=device-width,initial-scale=1">
+  <title>Home</title>
+    <style>
+      * {
+        margin:0;
+        padding:0;
+      }
+      body {
+          background:url("blackwallpaper.jpg") no-repeat center center fixed;
+          background-size:cover;
+      }
+      .bar {
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        position:sticky;
+        top:0;
+        cursor:pointer;
+        width:100%;
+        height:60px;
+        display:flex;
+        align-items:center;
+        background-color:black;
+      }
+      .bar li{
+        display:inline-block;
+        list-style-image:none;
+        padding:0;
+      }
+      .bar li a {
+        padding:25px;
+        text-decoration:none;
+        color:white;
+      }
+      .bar li a:hover {
+        color:grey;
+      }
+      .weblogo {
+        display:flex;
+        justify-content:left;
+        align-items:left;
+        padding:20px;
+      }
+      .weblogo img {
+        width:50px;
+        height:50px;
+        border:1px solid white;
+        border-radius:20px;
+      }
+      .nav-list {
+        width:100%;
+        display:flex;
+        align-items:center;
+      }
+      .imglogo {
+          padding-top:20px;
+          padding-left:15px;
+          padding-right:20px;
+      }
+      .imglogo img {
+          width:380px;
+          height:450px;
+          border:2px solid red;
+          border-radius:27px;
+      }
+      .images {
+          padding-top:30px;
+          padding-left:15px;
+          padding-right:20px;
+          padding-bottom:30px;
+      }
+      .images img {
+          width:380px;
+          height:380px;
+          border:2px solid red;
+          border-radius:27px;
+      }
+      .texts h1 {
+          color:white;
+          font-size:60px;
+          padding-left:100px;
+      }
+      .texts h3 {
+          color:white;
+          font-size:30px;
+          padding-left:20px;
+          text-align:center;
+      }
+      .para {
+          color:white;
+          font-size:15px;
+          padding:10px;
+          text-align:center;
+      }
+      .dev {
+          padding-left:150px;
+      }
+      .dev img {
+          width:100px;
+          height:100px;
+          border:2px solid red;
+          border-radius:20px;
+      }
+      .last h1 {
+          color:white;
+          font-size:40px;
+          padding-left:70px;
+      }
+      .last h2 {
+          color:white;
+          font-size:30px;
+          padding-left:150px;
+      }
+      .last a {
+          color:white;
+          font-size:25px;
+          display:inline-block;
+          text-decoration:none;
+          padding-bottom:20px;
+          padding-left:170px;
+      }
+      .last a:hover {
+          color:red;
+      }
+    </style>
+  <body>
+    <nav class="bar">
+      <ul class="nav-list">
+        <div class="weblogo">
+          <img src="Logo.jpg">
+        </div>
+        <li><a href="#home" class="button">Home</a></li>
+        <li><a href="program.html" class="button">Programs</a></li>
+        <li><a href="websitepage4.html" class="button">Developer</a></li>
+      </ul>
+    </nav>
+    <section class="content">
+        <div class="imglogo">
+            <img src="Logo.jpg">
+        </div>
+        <div class="texts">
+            <h1>Let's code</h1>
+            <h3>welcome in the world of programming</h3>
+            <p class="para">Hello there , I'm Akash Nath...a student of 11<sup>th</sup>grade and a passionate programmer. This website is my firstever website , so if I make a mistake then please forgive me. Hope you like this...please give me your valueable feedback so that I can upgrade my coding skill.</p>
+            <div class="dev">
+                <img src="Myphoto.jpg">
+            </div>
+        </div>
+        <section class="images">
+            <img class="slide" src="html-logo.jpg">
+            <img class="slide" src="javascript-logo.png">
+            <img class="slide" src="python-logo.jpg">
+        </section>
+      <script>
+        var Myindex=0;
+        fun();
+        function fun() {
+            var i;
+            var x=document.getElementsByClassName("slide");
+            for (i=0;i<x.length;i++){
+                x[i].style.display="none";
+            }
+            Myindex++;
+            if (Myindex>x.length){Myindex=1}
+            x[Myindex-1].style.display="block";
+            setTimeout(fun,3000)
+        }
+      </script>
+    </section>
+    <footer class="last">
+        <h1>Thanks for visiting</h1>
+        <h2>Contact us</h2>
+        <a href="websitepage4.html">Click here</a>
+    </footer>
+  </body>
+</html>
